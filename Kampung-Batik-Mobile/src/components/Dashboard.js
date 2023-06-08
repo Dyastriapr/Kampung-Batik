@@ -5,12 +5,11 @@ export default function App() {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.header}>
-       <Image
+        <Image
           source={require('./assets/profile.png')}
           style={styles.logo}
         />
-        <Text style={styles.logo}>Admin</Text>
-        <Text style={styles.username}>Kampung Batik Cibuluh</Text>
+        <Text style={styles.username}>John Doe</Text>
       </View>
       <Text style={styles.heading}>Dashboard</Text>
     </SafeAreaView>
@@ -23,16 +22,15 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
   },
   header: {
-    backgroundColor: '#069544',
-    paddingVertical: 40,
+    backgroundColor: '#2196F3',
+    paddingVertical: 16,
     paddingHorizontal: 24,
     flexDirection: 'row',
     alignItems: 'center',
   },
   logo: {
-    fontSize: 24,
-    fontWeight: 'bold',
-    color: '#fff',
+    width: 32,
+    height: 32,
     marginRight: 8,
   },
   username: {
