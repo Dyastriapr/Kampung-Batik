@@ -1,13 +1,12 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
+import { SafeAreaView, ScrollView, StyleSheet, Text, View, Image } from "react-native";
+import Dashboard from './src/components/Dashboard';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Kevina Cantik</Text>
-      <Text>Hallo world</Text>
-      <StatusBar style="auto" />
-    </View>
+    <ScrollView style={{marginTop: 50}}>
+    <Dashboard />
+    </ScrollView>
   );
 }
 
