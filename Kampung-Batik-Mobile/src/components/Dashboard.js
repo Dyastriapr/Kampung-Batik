@@ -28,7 +28,6 @@ const styles = StyleSheet.create({
     paddingHorizontal: 24,
     flexDirection: 'row',
     alignItems: 'center',
-    borderRadius : 10
   },
   logo: {
     fontSize: 24,
