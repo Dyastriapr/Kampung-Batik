@@ -5,7 +5,8 @@ import FormLogin from "./screen/widget/FormLogin";
 import Home from "./screen/Home";
 
 export default function App() {
-  return <Home />;
+
+return <Home />;
 }
 
 const styles = StyleSheet.create({});
