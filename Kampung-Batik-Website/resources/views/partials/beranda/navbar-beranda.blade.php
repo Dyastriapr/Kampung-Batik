@@ -17,5 +17,17 @@
         </li>
       </ul>
     </div>
+    <div>
+        <span>
+            @auth
+            <div class="card">
+                <div class="card-body">
+                  <p>Login berhasil</p>
+                </div>
+              </div>            @else
+                <a href="/api/login"><button type="button" class="btn btn-success">Masuk</button></a>
+            @endauth
+        </span>
+    </div>
   </div>
 </nav>

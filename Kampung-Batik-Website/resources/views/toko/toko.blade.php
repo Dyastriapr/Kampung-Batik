@@ -11,7 +11,7 @@
         @include('partials.toko.navbar-toko')
     </header>
     <main class="container">
-        
+
         <div id="carouselExample" class="carousel slide mt-5 mb-3" data-bs-ride="carousel">
             <div class="carousel-inner">
               <div class="carousel-item active">
@@ -44,14 +44,14 @@
             </div>
           </ol>
         </nav>       --}}
-  
+
         {{-- button --}}
           <div class="card mb-5 w-100 border-0">
             <div class="row g-3">
               <div class="col-md-1 ">
                 <button type="button" class="btn btn-success w-100 btn-sm rounded-0">Pakaian</button>
               </div>
-              <div class="col-md-1 "> 
+              <div class="col-md-1 ">
                 <button type="button" class="btn btn-success btn-sm w-100 rounded-0">Souvenir</button>
               </div>
               <div class="col-md-1 ">
@@ -74,23 +74,20 @@
 
 
           {{-- Daftar produk --}}
-          
+
           <div class="row row-cols-1 row-cols-md-4 g-4">
             @foreach ($produk as $item)
             <div class="col">
               <div class="card h-100">
-                <a href="/detail-produk/{{ $item->id }}"><img src="{{ $item->image }}" class="card-img-top" alt="..."></a>
+                <a href="/api/toko/{{ $item->id }}"><img src="{{ $item->image }}" class="card-img-top" alt="..."></a>
                 <div class="card-body">
                   <h5 class="card-title">{{ $item->name }}</h5>
                   <p class="card-text">Rp. {{ $item->price }}</p>
-                  <button type="button" class="btn btn-outline-dark btn btn-sm">Masukan Keranjang</button>
                 </div>
               </div>
             </div>
             @endforeach
           </div>
-      
-      
 
     </main>
     <footer></footer>

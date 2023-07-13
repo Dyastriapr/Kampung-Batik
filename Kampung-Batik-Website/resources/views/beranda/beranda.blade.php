@@ -56,7 +56,7 @@
                 <p class="card-text"><small class="text-body-secondary">Some quick example text to build on the card title and make up the bulk of the card's content.</small></p>
                 <a href="/reservasi" class="btn btn-success">Detail</a>
               </div>
-            </div>      
+            </div>
           </div>
         </div>
       </div>
@@ -152,7 +152,7 @@
         </div>
       </div>
 
-      
+
       {{-- produk --}}
       <div class="card w-100 text-start rounded-0 border-0 mb-0 ">
         <div class="card-body border-0">
@@ -193,7 +193,7 @@
               <div class="row g-0">
                 <div class="col-md-4">
                   <img src="/img/bumiku.png" class="img-fluid" alt="...">
-                </div> 
+                </div>
                 <div class="col-md-8 m-auto">
                   <div class="card-body">
                     <p class="card-title">Batik Bumiku</p>
@@ -344,7 +344,7 @@
         </div>
         <div class="col">
           <div class="card h-100 align-items-center text-center rounded-0 shadow">
-            <img src="\img\icon\store_4360494.png" class="card-img-top mt-4" alt="..." style="width: 38px"> 
+            <img src="\img\icon\store_4360494.png" class="card-img-top mt-4" alt="..." style="width: 38px">
             <div class="card-body">
               {{-- <h5 class="card-title">Kios Souvenir</h5> --}}
               <p class="card-text">Kios Souvenir</p>
@@ -394,7 +394,7 @@
           </div>
         </div>
       </div>
-    </div> 
+    </div>
 
      {{-- media sosial --}}
      <div class="card w-100 rounded-0 border-0">
@@ -459,8 +459,8 @@
     <footer class="">
         @include('partials.beranda.footer-beranda')
     </footer>
-  
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
-  
+
   </body>
 </html>

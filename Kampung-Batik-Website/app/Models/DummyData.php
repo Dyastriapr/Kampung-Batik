@@ -9,6 +9,6 @@ class DummyData extends Model
 {
     use HasFactory;
 
-    protected $table = 'tb_product';
+ 
 
 }

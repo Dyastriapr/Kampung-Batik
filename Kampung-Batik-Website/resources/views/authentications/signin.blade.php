@@ -10,47 +10,46 @@
     <header></header>
 
     <main class="container">
-
-        <div class="card w-50 mt-5">
-            <div class="card-body">
-              <h5 class="card-title">Masuk ke akun anda</h5>
-              <p class="card-text">Masukkan email dan password anda untuk masuk</p>
-              <form>
-                <div class="mb-3">
-                  <label for="exampleInputEmail1" class="form-label">Email address</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        <div class="card mb-0 mt-5 w-100 rounded-0 shadow">
+            <div class="row g-0">
+              <div class="col-md-6">
+                <img src="/img/background/login.png" class="img-fluid " alt="...">
+                <div class="card-img-overlay row align-items-center w-50 m-0 text-center text-white ">
+                    <div class="">
+                        <div class="card-body">
+                            <p class="card-title">SELAMAT DATANG DI</p>
+                            <h5 class="card-title">KAMPUNG BATIK</h5>
+                            <h5 class="card-title">CIBULLUH BOGOR</h5>
+                            <p class="card-title">Masuk untuk mendapatkan Akses Reservasi dan Belanja</p>
+                        </div>
+                      </div>
                 </div>
-                <div class="mb-3">
-                  <label for="exampleInputPassword1" class="form-label">Password</label>
-                  <input type="password" class="form-control" id="exampleInputPassword1">
+              </div>
+              <div class="col-md-6 ">
+                <div class="card-body">
+                    <div class="card-body " >
+                        <h5 class="card-title">Masuk ke akun anda</h5>
+                        <p class="card-text"><small class="text-body-secondary">Masukkan email dan password anda untuk masuk</small></p>
+                        <form action="/api/login/indexlogin" method="POST" class="mb-5">
+                          <div class="mb-3">
+                            <label for="email" class="form-label"><small>Alamat email</small></label>
+                            <input type="email" name="email" class="form-control rounded-0" id="exampleInputEmail1" aria-describedby="emailHelp " required>
+                          </div>
+                          <div class="mb-3">
+                            <label for="password" class="form-label"><small>Password</small></label>
+                            <input type="password" name="password" class="form-control rounded-0" id="exampleInputPassword1" required>
+                          </div>
+                          <button type="submit" class="btn btn-success rounded-0">Lanjutkan</button>
+                      </form>
+                      <span class="card-title"><small class="text-body-secondary">Tidak memiliki akun ?</small></span>
+                      <a href="/api/register" class="fw-bold text-dark link-offset-2 link-underline link-underline-opacity-0">Daftar</a>
+                    </div>
                 </div>
-                <button type="submit" class="btn btn-primary">Lanjutkan</button>
-            </form>
+              </div>
             </div>
-
           </div>
-          {{-- <form action="{{ url('/signin') }}" method="post" >
-            <div>
-            <h1>Sign In to Kantin IBIK</h1>
-            <div>Please use your email and password with correctly</div>
-            </div>
-            <div>
-            <label for="email">Email</label>
-            <input type="text" name="email" />
-            </div>
-            <div>
-            <div>
-             <label for="password">Password</label>
-             <a href="#">Forgot Password ?</a>
-            </div>
-            <input type="password" name="password" />
-            </div>
-            <button type="submit">Continue</button>
-            </div>
-            </form> --}}
     </main>
     <footer></footer>
-    {{-- <h1>Hello, world!</h1> --}}
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
   </body>
 </html>
