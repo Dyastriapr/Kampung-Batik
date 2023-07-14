@@ -1,10 +1,13 @@
 import React, { Component } from "react";
-import { View, StyleSheet, Text, Image } from "react-native";
-import { SafeAreaView } from "react-native-web";
+import { View, StyleSheet, Text, Image, TouchableOpacity } from "react-native";
+import { SafeAreaView } from "react-native";
 import MenuHome from "./widget/MenuHome";
+import ScheduleHome from "./widget/ScheduleHome";
+import Toko from "./Toko";
 
 class Home extends Component {
   render() {
+    const { navigation } = this.props;
     return (
       <SafeAreaView style={styles.container}>
         <View style={styles.header}>
@@ -15,24 +18,33 @@ class Home extends Component {
                 style={{ height: 60, width: 60 }}
               />
             </View>
-            <View style={{ marginHorizontal: 10, justifyContent: "center" }}>
+            <View
+              style={{
+                marginHorizontal: 10,
+                justifyContent: "center",
+              }}
+            >
               <Text style={{ fontWeight: "bold", color: "white" }}>ADMIN</Text>
               <Text style={{ color: "white" }}>Kampung Batik Cibuluh</Text>
             </View>
           </View>
-          <View style={{ marginHorizontal: 20, marginVertical: 20 }}>
-            <Image
-              source={require("../assets/calender.png")}
-              style={{ height: 50, width: 50 }}
-            />
-          </View>
+          <TouchableOpacity>
+            <View style={{ marginHorizontal: 20, marginVertical: 20 }}>
+              <Image
+                source={require("../assets/calender.png")}
+                style={{ height: 50, width: 50 }}
+              />
+            </View>
+          </TouchableOpacity>
         </View>
 
-        <View style={{ flex: 1, backgroundColor: "blue" }}>
-          <MenuHome />
+        <View style={{ flex: 1, padding: 40 }}>
+          <MenuHome navigation={navigation} />
         </View>
 
-        <View style={{ flex: 1, backgroundColor: "red" }}></View>
+        <View style={{ flex: 2 }}>
+          <ScheduleHome />
+        </View>
       </SafeAreaView>
     );
   }
@@ -43,13 +55,14 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   header: {
-    flex: 0.5,
+    flex: 0.7,
     backgroundColor: "green",
     borderBottomRightRadius: 25,
     borderBottomLeftRadius: 25,
     justifyContent: "space-between",
     flexDirection: "row",
     alignItems: "center",
+    marginTop: 20,
   },
   user: {
     flexDirection: "row",

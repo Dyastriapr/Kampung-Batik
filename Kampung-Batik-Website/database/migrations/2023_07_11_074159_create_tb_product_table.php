@@ -20,7 +20,7 @@ return new class extends Migration
             $table->double('price', 8, 2);
             $table->timestamps();
         });
-        
+
     }
 
     /**

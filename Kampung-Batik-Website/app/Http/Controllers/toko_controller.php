@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Resources\DetailTokoReseource;
-use App\Http\Resources\TokoReseource;
+// use App\Http\Resources\DetailTokoReseource;
+use App\Http\Resources\DetailTokoResource;
+// use App\Http\Resources\TokoReseource;
+use App\Http\Resources\TokoResource;
 use Illuminate\Http\Request;
 use App\Models\Product;
 
@@ -13,7 +15,7 @@ class toko_controller extends Controller
 
         $product = Product :: all();
         // return response()->json(['data'=> $product]);
-        return TokoReseource::collection($product);
+        return TokoResource::collection($product);
 
         // return vie('toko.toko',[
         //     "title" => "Toko",
@@ -27,7 +29,7 @@ class toko_controller extends Controller
         // ]);
         $product = Product::findOrFail($id);
         // return response()->json(['data'=> $product]);
-        return new DetailTokoReseource($product);
+        return new DetailTokoResource($product);
     }
-    
+
 }

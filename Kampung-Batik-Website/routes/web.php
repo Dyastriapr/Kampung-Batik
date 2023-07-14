@@ -30,9 +30,9 @@ route::get('/detail-produk/{produk:id}', [toko_controller::class, 'detail']);
 
 // route::get('/login',[beranda_controller::class, 'login']);
 
-Route::controller(Authentication::class)->group(function () {
-    Route::get('/signin', 'index')->name('signin');
-});
+// Route::controller(Authentication::class)->group(function () {
+//     Route::get('/signin', 'index')->name('signin');
+// });
 
 
 

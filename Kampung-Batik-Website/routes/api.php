@@ -5,7 +5,6 @@ use App\Http\Controllers\AuthenticationController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
-
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -24,3 +23,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::get('/toko',[toko_controller::class ,"index"]);
 Route::get('/toko/{id}',[toko_controller::class ,"detail"]);
 Route::post('/login' , [AuthenticationController::class , "login"]);
+
+Route::get('/test', function(){
+    dd('test api update');
+});

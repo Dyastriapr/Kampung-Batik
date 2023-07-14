@@ -11,7 +11,7 @@ import {
   Pressable,
 } from "react-native";
 
-const FormLogin = () => {
+const FormLogin = ({ navigation }) => {
   const [username, setUsername] = useState("");
 
   const [password, setPassword] = useState("");
@@ -90,7 +90,10 @@ const FormLogin = () => {
           </Pressable>
         </View>
       </View>
-      <TouchableOpacity style={styles.button}>
+      <TouchableOpacity
+        style={styles.button}
+        onPress={() => navigation.navigate("home")}
+      >
         <Text style={styles.text_button}>LOGIN</Text>
       </TouchableOpacity>
     </View>

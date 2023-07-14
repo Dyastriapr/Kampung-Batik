@@ -4,17 +4,18 @@ import FormLogin from "./widget/FormLogin";
 
 class Login extends Component {
   render() {
+    const { navigation } = this.props;
+
     return (
       <SafeAreaView style={styles.container}>
-        <View>
-          <View style={styles.logo}>
-            <Image
-              source={require("../assets/Logo.png")}
-              style={{ height: 200, width: 250 }}
-            />
-          </View>
+        <View style={styles.logo}>
+          <Image
+            source={require("../assets/Logo.png")}
+            style={{ height: 200, width: 250 }}
+          />
         </View>
-        <FormLogin />
+
+        <FormLogin navigation={navigation} />
       </SafeAreaView>
     );
   }

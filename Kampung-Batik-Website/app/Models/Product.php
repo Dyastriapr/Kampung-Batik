@@ -10,6 +10,7 @@ class Product extends Model
     use HasFactory;
 
     protected $table = 'tb_product';
-    
+    protected $guarded = ['id'];
+
 }
 
